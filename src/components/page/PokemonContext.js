@@ -18,7 +18,7 @@ const PokemonContext = () => {
 // Este setState sirve para la anterior paginación. //
     const [prevUrl, setPrevUrl] = useState('')
 // Este setState sirve para abrir y cerrar el modal con la info del pókemon. //
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState('')
 // Este setState sirve para avisar que se esta cargando la información. //
     const [loading, setLoading] = useState([])
     const AllPokemons = 'https://pokeapi.co/api/v2/pokemon/'
@@ -47,6 +47,7 @@ const PokemonContext = () => {
         setLoading(true)
         let data = await getAllPokemon(nextUrl)
         await loadingPokemon(data.results)
+        console.log(data.results)
         setNextUrl(data.next)
         setPrevUrl(data.previous)
         setLoading(false) 
@@ -78,6 +79,7 @@ const PokemonContext = () => {
                     change={change} 
                     pokemon={el}
                     key={i}
+                    index={i}
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
                 />
