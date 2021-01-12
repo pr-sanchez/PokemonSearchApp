@@ -1,4 +1,4 @@
-Para poder vizualizar el siguiente proyecto tengas que:
+Para poder vizualizar el siguiente proyecto tendrás que:
 
 - Hacer un git clone de este repositorio en tu pc ( https://github.com/oswaldoAlvarez/PokemonSearchApp.git ).
 
