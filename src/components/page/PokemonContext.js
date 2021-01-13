@@ -47,7 +47,6 @@ const PokemonContext = () => {
         setLoading(true)
         let data = await getAllPokemon(nextUrl)
         await loadingPokemon(data.results)
-        console.log(data.results)
         setNextUrl(data.next)
         setPrevUrl(data.previous)
         setLoading(false) 

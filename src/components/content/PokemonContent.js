@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalContainer from '../modal/ModalContainer'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

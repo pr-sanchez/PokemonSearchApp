@@ -3,11 +3,15 @@ import ModalContainer from '../modal/ModalContainer'
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CardContainer = ({ pokemon, isOpen, setIsOpen, index }) => {
+const CardContainer = ({ pokemon, isOpen, setIsOpen }) => {
     return (
         <div className='information-wrapper'>
             <div className='information-content'>
-                <FontAwesomeIcon className='information-content__info-modal' icon={faInfoCircle} onClick={() => setIsOpen(index)} />
+                <FontAwesomeIcon 
+                    className='information-content__info-modal' 
+                    icon={faInfoCircle} 
+                    onClick={() => setIsOpen(pokemon.id)} 
+                />
                 <div className='information-content__image'>
                     <img className='information-content__image-source' src={pokemon.sprites.front_default}></img>
                 </div>
@@ -34,7 +38,7 @@ const CardContainer = ({ pokemon, isOpen, setIsOpen, index }) => {
                             <div>Peso:</div>
                             <div><b>{pokemon.weight} libras</b></div>
                         </div>
-                        {isOpen === pokemon.id - 1 ? 
+                        {isOpen === pokemon.id ? 
                             <ModalContainer pokemon={pokemon} setIsOpen={setIsOpen} />
                             :
                             null
