@@ -1,315 +1,318 @@
-@import './vars.scss';
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import "./vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 body {
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-    .header-wrapper {
-        height: 10vh;
-        background: $bg_pokemon-blue;
-        .header-container {
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            padding-left: 30px;
-            color: $header_word;
-            font-size: 25px;
-            height: inherit;
-        }
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  .header-wrapper {
+    height: 10vh;
+    background: $bg_pokemon-blue;
+    .header-container {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding-left: 30px;
+      color: $header_word;
+      font-size: 25px;
+      height: inherit;
     }
-    .content-wrapper {
-        height: 90vh;
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .content-title {
-                display: flex;
-                font-size: 4rem;
-                justify-content: center;
-                padding: 40px;
-                color: $bg_pokemon-blue;
-            }
-            .content-btn {
-                display: flex;
-                .content-btn__btn {
-                    color: $bg_pokemon-blue;
-                    padding: 5px 20px;
-                    font-weight: bold;
-                    text-decoration: none;
-                    border: none;
-                    outline: none;
-                    background-color: initial;
-                    cursor: pointer;
-                    border: 1px solid $bg_pokemon-blue;
-                    border-radius: 8px;
-                    margin: 5px;
-                    &:hover {
-                        color: $white_color;
-                        background: $bg_pokemon-blue;
-                        transition: 1s;
-                    }
-                }
-            }
-            .widthList {
-                width: 50% !important;
-            }
-            .content-search {
-                width: 65%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                .content-search__wrapper-select {
-                    .content-search__select {
-                        margin-left: 5px;
-                        height: 35px;
-                        width: 120px;
-                        border-radius: 4px;
-                        border: 3px solid $lightGray_color;
-                    }
-                }
-                .content-search__wrapper-input {
-                    display: flex;
-                    align-items: center;
-                    
-                    .content-search__img {
-                        font-size: 20px;
-                        color: $gray_color;
-                    }
-                    .content-search__input {
-                        margin-left: 5px;
-                        height: 25px;
-                        width: 120px;
-                        border-radius: 4px;
-                        border: 3px solid $lightGray_color;
-                    }
-                }
-            }
-            .listaStyle {
-                flex-direction: column;
-                align-items: center;
-            }
-            .content-information {
-                width: 100%;
-                height: 10%;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                .information-wrapper {
-                    display: flex;
-                    padding: 15px;
-                    .information-content {
-                        position: relative;
-                        height: 250px;
-                        width: 450px;
-                        display: flex;
-                        border-radius: 8px;
-                        color: $white_color;
-                        background: linear-gradient(120deg, #00F2FF, #0CB7FF);
-                        border: 3px solid;
-                        .information-content__info-modal {
-                            width: 1em;
-                            position: absolute;
-                            padding: 8px;
-                            cursor: pointer;
-                            right: 0;
-                        }
-                        .information-content__image {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 50%;
-                            height: 100%;
-                            .information-content__image-source {
-                                width: 120px;
-                                border-radius: 8px;
-                            }
-                        }
-                        .information-content__information {
-                            width: 50%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: end;
-                            justify-content: center;
-                            .information-title {
-                                font-size: 2rem;
-                                display: flex;
-                                justify-content: end;
-                                width: 100%;
-                                padding: 10px;
-                                color: $white_color;
-                                font-weight: bold;
-                            }
-                            .information-description-wrapper {
-                                overflow-y: scroll;
-                                height: 65%;
-                                width: 97%;
-                                &::-webkit-scrollbar {
-                                    background-color: $lightGray_color;
-                                    width: 6px;
-                                }
-                                &::-webkit-scrollbar-thumb {
-                                    background-color: $gray_color;
-                                    border-radius: 6px;
-                                }
-                                .information-description {
-                                    word-break: break-word;
-                                    cursor: pointer;
-                                    color: $bg_pokemon-blueviolet;
-                                }
-                                .information-modal-wrapper {
-                                    width: 100%;
-                                    height: 100%;
-                                    background-color: rgba(0,0,0,0.5);
-                                    display: flex;
-                                    justify-content: center;
-                                    position: fixed;
-                                    top: 0;
-                                    left: 0;
-                                    align-items: center;
-                                    z-index: 3;
-                                    .information-modal-content {
-                                        width: 50%;
-                                        height: 50%;
-                                        background-color: white;
-                                        color: black;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        position: relative;
-                                        border-radius: 8px;
-                                        .information-modal-content__icon {
-                                            position: absolute;
-                                            right: 15px;
-                                            top: 10px;
-                                            font-size: 25px;
-                                            cursor: pointer;
-                                        }
-                                        .information-modal {
-                                            width: 100%;
-                                            height: 100%;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            .information-modal__image-wrapper {
-                                                width: 50%;
-                                                display: flex;
-                                                justify-content: center;
-                                                .information-modal__image-source {
-                                                    width: 200px;
-                                                }
-                                            }
-                                            .information-modal__description-wrapper {
-                                                width: 50%;
-                                                height: 80%;
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: space-evenly;
-                                                .information-modal__title {
-                                                    font-size: 3rem;
-                                                    display: flex;
-                                                    justify-content: end;
-                                                    width: 100%;
-                                                    padding: 10px;
-                                                    font-weight: bold;
-                                                }
-                                                .information-modal__description {
+  }
+  .content-wrapper {
+    height: 90vh;
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content-title {
+        display: flex;
+        font-size: 4rem;
+        justify-content: center;
+        padding: 40px;
+        color: $bg_pokemon-blue;
+      }
+      .content-btn {
+        display: flex;
+        .content-btn__btn {
+          &:disabled {
+            cursor: not-allowed;
+          }
 
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+          color: $bg_pokemon-blue;
+          padding: 5px 20px;
+          font-weight: bold;
+          text-decoration: none;
+          border: none;
+          outline: none;
+          background-color: initial;
+          cursor: pointer;
+          border: 1px solid $bg_pokemon-blue;
+          border-radius: 8px;
+          margin: 5px;
+          &:hover {
+            color: $white_color;
+            background: $bg_pokemon-blue;
+            transition: 1s;
+          }
         }
+      }
+      .widthList {
+        width: 50% !important;
+      }
+      .content-search {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content-search__wrapper-select {
+          .content-search__select {
+            margin-left: 5px;
+            height: 35px;
+            width: 120px;
+            border-radius: 4px;
+            border: 3px solid $lightGray_color;
+          }
+        }
+        .content-search__wrapper-input {
+          display: flex;
+          align-items: center;
+
+          .content-search__img {
+            font-size: 20px;
+            color: $gray_color;
+          }
+          .content-search__input {
+            margin-left: 5px;
+            height: 25px;
+            width: 120px;
+            border-radius: 4px;
+            border: 3px solid $lightGray_color;
+          }
+        }
+      }
+      .listaStyle {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content-information {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .information-wrapper {
+          display: flex;
+          padding: 15px;
+          .information-content {
+            position: relative;
+            height: 250px;
+            width: 450px;
+            display: flex;
+            border-radius: 8px;
+            color: $white_color;
+            background: linear-gradient(120deg, #00f2ff, #0cb7ff);
+            border: 3px solid;
+            .information-content__info-modal {
+              width: 1em;
+              position: absolute;
+              padding: 8px;
+              cursor: pointer;
+              right: 0;
+            }
+            .information-content__image {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 50%;
+              height: 100%;
+              .information-content__image-source {
+                width: 120px;
+                border-radius: 8px;
+              }
+            }
+            .information-content__information {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              justify-content: center;
+              .information-title {
+                font-size: 2rem;
+                display: flex;
+                justify-content: end;
+                width: 100%;
+                padding: 10px;
+                color: $white_color;
+                font-weight: bold;
+              }
+              .information-description-wrapper {
+                overflow-y: scroll;
+                height: 65%;
+                width: 97%;
+                &::-webkit-scrollbar {
+                  background-color: $lightGray_color;
+                  width: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background-color: $gray_color;
+                  border-radius: 6px;
+                }
+                .information-description {
+                  word-break: break-word;
+                  cursor: pointer;
+                  color: $bg_pokemon-blueviolet;
+                }
+                .information-modal-wrapper {
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  display: flex;
+                  justify-content: center;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  align-items: center;
+                  z-index: 3;
+                  .information-modal-content {
+                    width: 50%;
+                    height: 50%;
+                    background-color: white;
+                    color: black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    border-radius: 8px;
+                    .information-modal-content__icon {
+                      position: absolute;
+                      right: 15px;
+                      top: 10px;
+                      font-size: 25px;
+                      cursor: pointer;
+                    }
+                    .information-modal {
+                      width: 100%;
+                      height: 100%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      .information-modal__image-wrapper {
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        .information-modal__image-source {
+                          width: 200px;
+                        }
+                      }
+                      .information-modal__description-wrapper {
+                        width: 50%;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        .information-modal__title {
+                          font-size: 3rem;
+                          display: flex;
+                          justify-content: end;
+                          width: 100%;
+                          padding: 10px;
+                          font-weight: bold;
+                        }
+                        .information-modal__description {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @media (max-width: 900px) {
-        .content-title {
-        text-align: center;
-        }
-        .content-search {
-            flex-direction: column;
-            align-items: flex-end !important;
-            width: 55% !important;
-            .content-search__wrapper-select {
-                display: none;
-            }
-        }
-        .information-modal-wrapper {
-            .information-modal-content {
-                width: 70% !important;
-            }
-        }
+  .content-title {
+    text-align: center;
+  }
+  .content-search {
+    flex-direction: column;
+    align-items: flex-end !important;
+    width: 55% !important;
+    .content-search__wrapper-select {
+      display: none;
     }
+  }
+  .information-modal-wrapper {
+    .information-modal-content {
+      width: 70% !important;
+    }
+  }
+}
 
 @media (max-width: 600px) {
-        .content-title {
-            font-size: 2rem !important;
-        }
-        .content-search {
-            width: 90% !important;
-        }
-        .information-description-wrapper {
-            width: 98%;    
-            .information-modal-wrapper {
-                .information-modal-content {
-                    width: 90% !important;
-                }
-            }
-        }
+  .content-title {
+    font-size: 2rem !important;
+  }
+  .content-search {
+    width: 90% !important;
+  }
+  .information-description-wrapper {
+    width: 98%;
+    .information-modal-wrapper {
+      .information-modal-content {
+        width: 90% !important;
+      }
     }
+  }
+}
 
 @media (max-width: 500px) {
-    .content-btn {
-        margin-bottom: 10px !important;
+  .content-btn {
+    margin-bottom: 10px !important;
+  }
+  .information-content {
+    width: 300px !important;
+    height: auto !important;
+    flex-direction: column;
+    align-items: center;
+    .information-content__image {
+      // display: none !important;
+      .information-content__image-source {
+        font-size: 20px !important;
+      }
     }
-    .information-content {
-        width: 300px !important;
-        height: auto !important;
-        flex-direction: column;
-        align-items: center;
-        .information-content__image {
-            // display: none !important;
-            .information-content__image-source {
-                font-size: 20px !important;
-            }
-        }
-        .information-content__information {
-            width: 100% !important;
-            .information-title {
-                justify-content: center !important;
-                width: 94% !important;
-            }
-            .information-description-wrapper {
-                padding: 8px;
-                text-align: center;   
-                margin: none !important;
-                width: 92% !important;
-                text-align: center;     
-                .information-modal-wrapper {
-                    .information-modal-content {
-                        width: 70% !important;
-                        height: 70% !important;
-                        .information-modal {
-                            flex-direction: column !important;
-                            padding: 10px;
-                            .information-modal__description-wrapper {
-                                width: 70% !important;
-                                .information-modal__title {
-                                    justify-content: center !important;
-                                }
-                            }
-                        }
-                    }
+    .information-content__information {
+      width: 100% !important;
+      .information-title {
+        justify-content: center !important;
+        width: 94% !important;
+      }
+      .information-description-wrapper {
+        padding: 8px;
+        text-align: center;
+        margin: none !important;
+        width: 92% !important;
+        text-align: center;
+        .information-modal-wrapper {
+          .information-modal-content {
+            width: 70% !important;
+            height: 70% !important;
+            .information-modal {
+              flex-direction: column !important;
+              padding: 10px;
+              .information-modal__description-wrapper {
+                width: 70% !important;
+                .information-modal__title {
+                  justify-content: center !important;
                 }
+              }
             }
+          }
         }
+      }
     }
+  }
 }
