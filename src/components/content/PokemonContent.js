@@ -1,4 +1,4 @@
-import { useState, memo, useMemo } from "react";
+import { useState, useMemo } from "react";
 import CardContainer from "../content/CardContainer";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
